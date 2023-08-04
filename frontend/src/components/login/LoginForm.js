@@ -50,6 +50,7 @@ const LoginForm = () => {
   };
 
   return (
+    <div className='main-login'>
     <div className='login-form'>
     <form onSubmit={handleSubmit}>
       <label>
@@ -70,6 +71,7 @@ const LoginForm = () => {
       <button type="submit">Login</button>
     </form>
     <a href='/registerpage'>Register here?</a>
+    </div>
     </div>
   );
 };
