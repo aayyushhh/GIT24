@@ -1,0 +1,75 @@
+{
+  "Header": {
+    "title": "We are Finpro",
+    "paragraph": "Empowering Commerce with Your Unique Touch: Seamlessly Secure Payments Through Biometrics and Convenience."
+  },
+  "About": {
+    "paragraph": "At Finpro, we revolutionize transactions with cutting-edge biometric authentication. Say goodbye to mobiles and cash—simply use your fingerprint and password on the shopkeeper's device for swift, secure payments. Our 0.05% transaction fee ensures cost-effectiveness. Join us in shaping the future of effortless, secure commerce",
+    "Why": [
+      "Innovative  ",
+      "Secure      ",
+      "Convenient  ",
+      "Future-Ready"
+    ],
+    "Why2": [
+      "Reliable      ",
+      "Cost-Effective",
+      "User-Centric  ",
+      "Cutting-Edge  "
+    ]
+  },
+  
+  "Services": [
+    {
+      "icon": "fa fa-wordpress",
+      "name": "security",
+      "text": "Bank-level encryption, stringent privacy protocols, and real-time fraud detection ensure ironclad security for every biometric transaction, keeping your financial data safe."
+    },
+    {
+      "icon": "fa fa-cart-arrow-down",
+      "name": "Ease of Shopping",
+      "text": "Transforming shopping into a hassle-free delight, simplifying payments and enhancing your retail experience through our innovative biometric payment solution."
+    },
+    {
+      "icon": "fa fa-cloud-download",
+      "name": "Data Protection",
+      "text": "Advanced encryption, stringent privacy protocols, and compliance with data protection regulations safeguard user biometrics and personal information, ensuring trust and confidentiality."
+    },
+    {
+      "icon": "fa fa-language",
+      "name": "Transaction Change",
+      "text": "Transforming transactions through biometric magic—fingerprint and password blend for swift, secure, and cash-free payments, backed by a team passionate about innovation and convenience."
+    },
+    {
+      "icon": "fa fa-plane",
+      "name": "International use",
+      "text": "Enabling borderless transactions, our biometric payment solution transcends boundaries, empowering users worldwide to shop and pay effortlessly, while ensuring security and convenience."
+    },
+    {
+      "icon": "fa fa-pie-chart",
+      "name": "Transaction Fee",
+      "text": "Minimal 0.05% transaction fee ensures affordability while sustaining the excellence and security of our biometric-powered payment solution."
+    }
+  ],
+  
+  "Team": [
+    {
+      "img": "img/team/05.jpeg",
+      "name": "HARSH KOLI",
+      "job": "CEO"
+    },
+    {
+      "img": "img/team/02.jpg",
+      "name": "AYUSH DODAKE",
+      "job": "COC"
+    },
+    {
+      "img": "img/team/03.jpg",
+      "name": "ESSAKIRAJA KONNAR",
+      "job": "Finance expert"
+    }
+   
+  ]
+ 
+ 
+}

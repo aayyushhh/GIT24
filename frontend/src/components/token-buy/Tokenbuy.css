@@ -1,0 +1,37 @@
+.Gettoken {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .Gettoken h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .Gettoken input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+  
+  .Gettoken button {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+  
+  @media (max-width: 768px) {
+    .Gettoken h2 {
+      font-size: 20px;
+    }
+    
+    .Gettoken input,
+    .Gettoken button {
+      font-size: 14px;
+    }
+  }
+  
