@@ -1,21 +1,47 @@
-import React,{useState} from 'react';
+import React,{useEffect, useState} from 'react';
 import {useLocation} from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import "./Tokenredeem.css"
+import axios from 'axios';
 
 function Tokenredeem() {
     const [amount, setamount] = useState('');
     const navigate = useNavigate();
     const location = useLocation();
+    const [data,setData]=useState({});
+
+
+    const uname=location.state.uname;
+    const pass=location.state.pass;
+    const pass2=location.state.pass2;
+    const amt=location.state.amount;
+    const api1=location.state.api1;
+    const s_api=location.state.s_api;
+
+    useEffect(()=> {
+      const fetchData = async() => {
+        try{
+          const response = await axios.get(`http://127.0.0.1:5000/home/${uname}/${pass}/${pass2}`);
+          setData(response.data);
+        }catch(error){
+          console.error("Error")
+        }
+      };
+
+      fetchData();
+    },[]);
+
+    
+
+
     // const amt=location.state.amount;
     const handleSubmit = (e)=>{
       
-      const uname=location.state.uname;
-      const pass=location.state.pass;
-      const pass2=location.state.pass2;
-      const amt=location.state.amount;
-      const api1=location.state.api1;
-      const s_api=location.state.s_api;
+      
+      
+     
+
+
       const amt2=parseInt(amount)
       e.preventDefault();
       if(amount === ""){
@@ -25,8 +51,8 @@ function Tokenredeem() {
         alert("value is above expected")
       }else{
         var options = {
-          key: "rzp_test_3c0rgFHcYyF1no",
-          key_secret:s_api,
+          key: data.key1,
+          key_secret:data.s_key2,
           amount: amount *100,
           currency:"INR",
           name:"STARTUP_PROJECTS",

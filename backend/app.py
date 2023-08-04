@@ -108,9 +108,11 @@ def home(namex,passw,passw2):
     documents2 = users_collection.find({"username": namex,"password":passw,"password2":passw2})
     for document in documents2:
         money_sec = document["amount"]
+        key1=document["api_key"]
+        s_key2=document["s_api_key"]
         print("Money:", money_sec)
         
-    data={"money":money_sec,"age":0}
+    data={"money":money_sec,"age":0,"key1":key1,"s_key2":s_key2}
     return jsonify(data)
 
 @app.route('/gettoken', methods=["GET",'POST'])

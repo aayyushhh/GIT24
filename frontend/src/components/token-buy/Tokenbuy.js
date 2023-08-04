@@ -23,14 +23,16 @@ function Tokenbuy() {
     const uname=location.state.uname;
     const pass=location.state.pass;
     const pass2=location.state.pass2;
+    const key1="rzp_test_3c0rgFHcYyF1no";
+    const key2="1k7W0AYA2KfLrs368KEeyMXk";
 
     e.preventDefault();
     if(amount === ""){
     alert("please enter amount");
     }else{
       var options = {
-        key: "rzp_test_3c0rgFHcYyF1no",
-        key_secret:"1k7W0AYA2KfLrs368KEeyMXk",
+        key: key1,
+        key_secret:key2,
         amount: amount *100,
         currency:"INR",
         name:"STARTUP_PROJECTS",

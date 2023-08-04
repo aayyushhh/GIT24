@@ -22,7 +22,7 @@ const Homepage = () => {
       setLandingPageData(JsonData);
     }, []);
 
-
+    
 
     useEffect(()=> {
       const fetchData = async() => {
@@ -37,7 +37,7 @@ const Homepage = () => {
       fetchData();
     },[]);
 
-
+    
     const handleSubmit = async (e) => {
         e.preventDefault();
         
@@ -49,14 +49,14 @@ const Homepage = () => {
     const handleClick = async (e) => {
       e.preventDefault();
       
-      navigate('/tokenget',{state:{uname:uname,pass:pass,pass2:pass2,amount:data.money,api1:data.api_key,s_api:data.s_api_key}});
+      navigate('/tokenget',{state:{uname:uname,pass:pass,pass2:pass2,amount:data.money,api1:data.key1,s_api:data.s_key2}});
   
     
   };
   const handleClick2 = async (e) => {
     e.preventDefault();
     
-    navigate('/tokenredeem',{state:{uname:uname,pass:pass,pass2:pass2,amount:data.money,api1:data.api_key,s_api:data.s_api_key}});
+    navigate('/tokenredeem',{state:{uname:uname,pass:pass,pass2:pass2,amount:data.money,api1:data.key1,s_api:data.s_key2}});
 
   
 };
