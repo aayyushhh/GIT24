@@ -8,6 +8,8 @@ const RegistrationForm = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [password2, setPassword2] = useState('');
+  const [key, setKey] = useState('');
+  const [seckey, setSeckey] = useState('');
   const navigate = useNavigate();
   const handleUsernameChange = (e) => {
     setUsername(e.target.value);
@@ -25,6 +27,14 @@ const RegistrationForm = () => {
     setPassword2(e.target.value);
   };
 
+  const handleKeyChange = (e) => {
+    setKey(e.target.value);
+  };
+
+  const handleSeckeyChange = (e) => {
+    setSeckey(e.target.value);
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -33,6 +43,8 @@ const RegistrationForm = () => {
       email: email,
       password: password,
       password2:password2,
+      key:key,
+      s_key:seckey
     };
 
     try {
@@ -78,6 +90,15 @@ const RegistrationForm = () => {
       <label>
         Password2:
         <input type="password" value={password2} onChange={handlePasswordChange2} />
+      </label>
+
+      <label>
+        Razorpay Key:
+        <input type="password" value={key} onChange={handleKeyChange} />
+      </label>
+      <label>
+        Razorpay Secret Key:
+        <input type="password" value={seckey} onChange={handleSeckeyChange} />
       </label>
       <button type="submit">Register</button>
     </form>

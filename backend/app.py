@@ -16,6 +16,8 @@ def register():
     email = user_data['email']
     password = user_data['password']
     password2=user_data["password2"]
+    key=user_data["key"]
+    seckey=user_data["s_key"]
     amount=50
     
 
@@ -29,6 +31,8 @@ def register():
         'password': password,
         "password2":password2,
         "amount":amount,
+        "api_key":key,
+        "s_api_key":seckey
     }
 
     # Insert the new user document into the database

@@ -15,8 +15,7 @@ function Tokenredeem() {
     const pass=location.state.pass;
     const pass2=location.state.pass2;
     const amt=location.state.amount;
-    const api1=location.state.api1;
-    const s_api=location.state.s_api;
+   
 
     useEffect(()=> {
       const fetchData = async() => {
