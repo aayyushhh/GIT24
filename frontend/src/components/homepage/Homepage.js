@@ -16,6 +16,7 @@ const Homepage = () => {
     const pass2=location.state.pass2;
     const navigate = useNavigate();
     const [data,setData]=useState({});
+    
     const [landingPageData, setLandingPageData] = useState({});
     useEffect(() => {
       setLandingPageData(JsonData);

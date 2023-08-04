@@ -64,9 +64,11 @@ const PaymentPort = () => {
   };
 
   return (
-    <div>
-      <a href='/login'>logout</a>
-    <form onSubmit={handleSubmit}>
+    <div className='payme-tab'>
+    
+      
+    <form className='pay-form' onSubmit={handleSubmit}>
+      <div>
     <label>
         Amount(₹):
         <input type="text" value={amount} onChange={handleAmountChange} className='amount-sec'/>
@@ -87,10 +89,14 @@ const PaymentPort = () => {
         <input type="password" value={password2} onChange={handlePasswordChange2} />
       </label>
       <br/>
+      </div>
+      <div className='boton'>
       <button type="submit">Make Payment</button>
+      </div>
     </form>
     
     </div>
+    
   );
 };
 

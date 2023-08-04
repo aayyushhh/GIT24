@@ -1,13 +1,23 @@
 // import './App.css';
-import React,{useState} from 'react';
+import React,{useEffect, useState} from 'react';
 import {useLocation} from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import "./Tokenbuy.css"
+import { Services } from '../components/services';
+import { Team } from '../components/Team';
+import JsonData from "../data/data.json";
+import SmoothScroll from "smooth-scroll";
 
 function Tokenbuy() {
   const [amount, setamount] = useState('');
   const navigate = useNavigate();
   const location = useLocation();
+
+  const [landingPageData, setLandingPageData] = useState({});
+  useEffect(() => {
+    setLandingPageData(JsonData);
+  }, []);
+
   const handleSubmit = (e)=>{
     
     const uname=location.state.uname;
@@ -73,12 +83,16 @@ function Tokenbuy() {
     }
   }
   return (
+    <div>
     <div className="Gettoken">
      <h2>Razorpay Payment Integration Using React</h2>
      <br/>
      <input type="text"placeholder='Enter Amount'value={amount}onChange={(e)=>setamount(e.target.value)} />
      <br/><br/>
      <button onClick={handleSubmit}>submit</button>
+     
+    </div>
+    <Services data={landingPageData.Services} />
     </div>
   );
 }

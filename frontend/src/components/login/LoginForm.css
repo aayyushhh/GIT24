@@ -3,7 +3,8 @@
     margin: 0 auto;
     padding: 20px;
     background-image: url();
-    background-color: white;
+    background-color: rgb(208, 160, 255);
+    border-radius: 10px;
   }
 
   .main-login{
