@@ -73,7 +73,7 @@ const Homepage = () => {
       <input type="password" value={password} onChange={handlePasswordChange} />
       </form> */}
       <form onSubmit={handleSubmit}>
-    <button type="submit" >perform Payment process</button>
+    <button className='pay-bt' type="submit" >perform Payment process</button>
     </form>
     </div>
     <div className='btns'>

@@ -16,7 +16,7 @@ def register():
     email = user_data['email']
     password = user_data['password']
     password2=user_data["password2"]
-    amount=1000
+    amount=50
     
 
     # Check if the username or email already exists in the database

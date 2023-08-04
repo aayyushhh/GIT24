@@ -1,11 +1,13 @@
 import React from "react";
 import "./navigation.css"
+import logo from "./ico1.png"
 
 export const Navigation = (props) => {
   return (
     <div className="naviga">
     <nav class="navbar navbar-expand-lg bg-light">
   <div class="container-fluid">
+  <img className="img-log" src={logo} alt=""></img>
     <a class="navbar-brand" href="/">Finpro</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -16,10 +18,13 @@ export const Navigation = (props) => {
           <a class="nav-link active" aria-current="page" href="/">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#features">Features</a>
+          <a class="nav-link" href="#features">About Us</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Pricing</a>
+          <a class="nav-link" href="#">Services</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Team</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="/login">Login</a>

@@ -24,14 +24,25 @@
   border-radius: 5px;
 }
 
+.pay-bt{
+  background-color: rgb(255, 128, 0);
+  
+  
+}
+.pay-bt:hover{
+  background-color: rgb(255, 111, 0);
+}
+
 .payment-card{
   width: 95%;
-  background-color: rgb(172, 244, 242);
+  background-color: rgb(22, 128, 249);
   padding-top: 20px;
   border-radius: 5px;
   margin-top: 20px;
   box-shadow: 5px 5px rgb(219, 215, 215);
-  margin-bottom: 10px
+  margin-bottom: 10px;
+  color: white;
+  
   
   
 }
