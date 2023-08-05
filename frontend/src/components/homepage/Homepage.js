@@ -60,6 +60,14 @@ const Homepage = () => {
 
   
 };
+
+const handleClick3 = async (e) => {
+  e.preventDefault();
+  
+  navigate('/contact',{state:{uname:uname,pass:pass,pass2:pass2,amount:data.money,api1:data.key1,s_api:data.s_key2}});
+
+
+};
   return (
     <div>
     <div className='homepage'>
@@ -80,6 +88,7 @@ const Homepage = () => {
     <div className='btns'>
     <button className='btn1' onClick={handleClick}>Get Token</button>
     <button className='btn1' onClick={handleClick2}>Redeem Money</button>
+    <button className='btn1' onClick={handleClick3}>Pay to Contacts</button>
     </div>
 
     

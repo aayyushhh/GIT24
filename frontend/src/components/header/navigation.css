@@ -10,6 +10,16 @@
    
 }
 
+
+.bar{
+    background-color: rgb(71, 154, 248);
+    border-radius: 0px;
+    
+}
+
+.content{
+    color: white;
+}
 .nav-item{
     margin-left: 10px;
 }

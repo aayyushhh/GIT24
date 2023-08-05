@@ -20,6 +20,11 @@
   display: flex;
 }
 
+.btn1{
+  border: none;
+  background-color: rgb(111, 151, 242);
+}
+
 .btns > button{
   border-radius: 5px;
 }

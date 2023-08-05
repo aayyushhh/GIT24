@@ -91,7 +91,7 @@ function Tokenbuy() {
      <br/>
      <input type="text"placeholder='Enter Amount'value={amount}onChange={(e)=>setamount(e.target.value)} />
      <br/><br/>
-     <button onClick={handleSubmit}>submit</button>
+     <button className='token-sub' onClick={handleSubmit}>submit</button>
      
     </div>
     <Services data={landingPageData.Services} />

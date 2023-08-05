@@ -10,6 +10,7 @@ import Tokenredeem from './components/token-redeem/Tokenredeem';
 // import Header from './components/header/Header';
 import Land from './components/Land';
 import { Navigation } from './components/header/navigation';
+import Contactpay from './components/contactpay/Contactpay';
 
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
       <Route path="/amountpage" element={< PaymentPort />} />
       <Route path="/tokenget" element={< Tokenbuy />} />
       <Route path="/tokenredeem" element={< Tokenredeem />} />
+      <Route path="/contact" element={< Contactpay />} />
       {/* <LoginForm/> */}
       </Routes>
       </Router>

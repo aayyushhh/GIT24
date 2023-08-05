@@ -119,6 +119,25 @@ def home(namex,passw,passw2):
     data={"money":money_sec,"age":0,"key1":key1,"s_key2":s_key2}
     return jsonify(data)
 
+
+@app.route('/homey/<contact>', methods=["GET",'POST'])
+def homey(contact):
+    documents = users_collection.find({"contact": contact})
+    data = {"age": 0}
+
+    for document in documents:
+        money_sec = document["amount"]
+        key1 = document["api_key"]
+        s_key2 = document["s_api_key"]
+        print("Money:", money_sec)
+    
+    data["money"] = money_sec
+    data["key1"] = key1
+    data["s_key2"] = s_key2
+
+    return jsonify(data)
+
+
 @app.route('/gettoken', methods=["GET",'POST'])
 def gettoken():
     user_data = request.json
@@ -156,6 +175,56 @@ def redeemtoken():
     result1 = users_collection.update_one({"username": username,"password":password,"password2":password2}, {"$set": {"amount": amount}})
 
     return jsonify({'message': 'User registered successfully'}), 200
+
+
+@app.route('/payto', methods=["GET",'POST'])
+def payto():
+    user_data = request.json
+    contact=user_data["contact"]
+    amount = user_data["amount"]
+    username = user_data['M_name']
+    password = user_data['M_pass']
+    password2 = user_data['M_pass2']
+
+    # Check if the username and password match a user in the database
+    user = users_collection.find_one({'username': username, 'password': password,"password2":password2})
+    if user:
+        documents = users_collection.find({"contact":contact})
+        for document in documents:
+            money_Main = document["amount"]
+
+            print("Money:", money_Main)
+
+        documents2 = users_collection.find({"username": username,"password":password,"password2":password2})
+        for document in documents2:
+            money_sec = document["amount"]
+            print("Money2:", money_sec)
+
+        documents3 = users_collection.find({"username": "admin","password":"admin","password2":"2345"})
+        for document in documents3:
+            money_a = document["amount"]
+            print("Money3:", money_a)
+        
+        pay=float(amount)
+        per=math.ceil(0.005*pay)
+        if pay < 0:
+            print("amount cannot be negative")
+        elif pay>money_sec:
+            print("Amount is exceeded")
+        else:
+            new_m1=money_sec-pay-per
+            
+            new_m2=money_Main+pay
+            new_m3=money_a+per
+
+            result1 = users_collection.update_one({"contact":contact}, {"$set": {"amount": new_m2}})
+            result2 = users_collection.update_one({"username": username,"password":password,"password2":password2}, {"$set": {"amount": new_m1}})
+            result3 = users_collection.update_one({"username": "admin","password":"admin","password2":"2345"}, {"$set": {"amount": new_m3}})
+
+        return jsonify({'message': 'Login successful'}), 200
+
+    return jsonify({'message': 'Invalid username or password'}), 401
+
 
 if __name__ == '__main__':
     app.run(debug=True)
