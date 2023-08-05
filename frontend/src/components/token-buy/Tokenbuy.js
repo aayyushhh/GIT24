@@ -9,6 +9,7 @@ import JsonData from "../data/data.json";
 import SmoothScroll from "smooth-scroll";
 
 function Tokenbuy() {
+  const [loading, setLoading] = useState(false);
   const [amount, setamount] = useState('');
   const navigate = useNavigate();
   const location = useLocation();
@@ -18,7 +19,8 @@ function Tokenbuy() {
     setLandingPageData(JsonData);
   }, []);
 
-  const handleSubmit = (e)=>{
+  const handleSubmit = async(e)=>{
+    
     
     const uname=location.state.uname;
     const pass=location.state.pass;
@@ -27,6 +29,7 @@ function Tokenbuy() {
     const key2="1k7W0AYA2KfLrs368KEeyMXk";
 
     e.preventDefault();
+
     if(amount === ""){
     alert("please enter amount");
     }else{
@@ -46,6 +49,7 @@ function Tokenbuy() {
               };
           
               try {
+                
                 const response = await fetch('http://127.0.0.1:5000/gettoken', {
                   method: 'POST',
                   headers: {
@@ -65,8 +69,7 @@ function Tokenbuy() {
               }
 
 
-          alert(response.razorpay_payment_id);
-          alert("yo")
+          
         },
         prefill: {
           name:"harry",
@@ -91,7 +94,7 @@ function Tokenbuy() {
      <br/>
      <input type="text"placeholder='Enter Amount'value={amount}onChange={(e)=>setamount(e.target.value)} />
      <br/><br/>
-     <button className='token-sub' onClick={handleSubmit}>submit</button>
+     <button className='token-sub' onClick={handleSubmit} disabled={loading}>submit</button>
      
     </div>
     <Services data={landingPageData.Services} />

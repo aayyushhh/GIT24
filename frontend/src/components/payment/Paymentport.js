@@ -2,8 +2,10 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import {useLocation} from 'react-router-dom';
 import "./Paymentport.css";
+import Loader from '../loader/Loader';
 
 const PaymentPort = () => {
+  const [loading, setLoading] = useState(false);
   const location = useLocation();
   const uname=location.state.uname;
   const pass=location.state.pass;
@@ -31,6 +33,7 @@ const PaymentPort = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true);
 
     const userData = {
       username: username,
@@ -43,6 +46,7 @@ const PaymentPort = () => {
     };
 
     try {
+      await new Promise((resolve) => setTimeout(resolve, 1500));
       const response = await fetch('http://127.0.0.1:5000/paytime', {
         method: 'POST',
         headers: {
@@ -66,7 +70,7 @@ const PaymentPort = () => {
   return (
     <div className='payme-tab'>
     
-      
+      {loading ? <Loader /> :
     <form className='pay-form' onSubmit={handleSubmit}>
       <div>
     <label>
@@ -94,6 +98,7 @@ const PaymentPort = () => {
       <button type="submit">Make Payment</button>
       </div>
     </form>
+}
     
     </div>
     

@@ -1,0 +1,38 @@
+.loader-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    
+  }
+  
+  .circular-progress {
+    position: relative;
+  }
+  
+  .circular-progress .MuiCircularProgress-svg {
+    animation: rotate 2s linear infinite;
+  }
+  
+  /* .circular-progress::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: #1976d2;
+    animation: moveDots 2s infinite;
+  } */
+  
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+ 

@@ -3,8 +3,11 @@ import axios from 'axios';
 import { Services } from '../components/services';
 import JsonData from "../data/data.json";
 import { useLocation, useNavigate } from 'react-router-dom';
+import { CircularProgress } from '@mui/material';
+import Loader from '../loader/Loader';
 
 function Contactpay() {
+    const [loading, setLoading] = useState(false);
     const [amount, setamount] = useState('');
     const [contact, setContact] = useState('');
     const [pass,setPass] = useState('');
@@ -30,6 +33,7 @@ function Contactpay() {
   
       const HandleSubmit = async (e) =>{
         e.preventDefault();
+        setLoading(true);
         // useEffect(()=> {
         //     const fetchData = async() => {
         //       try{
@@ -64,6 +68,7 @@ function Contactpay() {
           };
       
           try {
+            await new Promise((resolve) => setTimeout(resolve, 1500));
             const response = await fetch('http://127.0.0.1:5000/payto', {
               method: 'POST',
               headers: {
@@ -81,6 +86,8 @@ function Contactpay() {
              // You can handle the response as needed
           } catch (error) {
             console.log(error);
+          }finally {
+            setLoading(false);
           }
     
           console.log(data.key1)
@@ -88,8 +95,9 @@ function Contactpay() {
 
   
   return (
-    <div>
+    <div>{loading ? <Loader /> :
       <div className="Gettoken">
+        
      <h2>Razorpay Payment Integration Using React</h2>
      <br/>
      <input type="text"placeholder='Enter Contact'value={contact}onChange={(e)=>setContact(e.target.value)} />
@@ -101,10 +109,12 @@ function Contactpay() {
      <br/>
      <input type="text"placeholder='Enter Pin'value={pass2}onChange={(e)=>setPass2(e.target.value)} />
      <br/><br/>
-     <button className='token-sub' onClick={HandleSubmit}>submit</button>
+     <button className='token-sub' onClick={HandleSubmit} disabled={loading}>Submit</button>
      
     </div>
+    }
     <Services data={landingPageData.Services} />
+    
     </div>
   )
 }
