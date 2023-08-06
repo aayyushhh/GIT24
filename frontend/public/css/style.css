@@ -71,6 +71,8 @@ hr {
   margin-bottom: 20px;
   border: 0;
 }
+
+
 /* Navigation */
 #menu {
   padding: 15px;
@@ -204,12 +206,14 @@ a:focus,
   outline: none;
   outline-offset: none;
 }
+/* ../img/intro-bg.jpg */
 /* Header Section */
 .intro {
+  /* padding-top: -60px; */
   display: table;
   width: 100%;
   padding: 0;
-  background: url(../img/intro-bg.jpg) center center no-repeat;
+  background: url("https://i.pinimg.com/originals/aa/bf/61/aabf6129fda9aea0506a37886fd29db8.gif") center center no-repeat;
   background-color: #e5e5e5;
   -webkit-background-size: cover;
   -moz-background-size: cover;
