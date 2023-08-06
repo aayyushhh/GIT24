@@ -79,7 +79,7 @@ const RegistrationForm = () => {
       <label>
         Email:
         <br></br>
-        <input type="email" value={email} onChange={handleEmailChange} />
+        <input type="email" value={email} className='embut' onChange={handleEmailChange} />
       </label>
       <br />
       <label>

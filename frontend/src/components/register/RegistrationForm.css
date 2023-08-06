@@ -32,6 +32,10 @@
     border-radius: 4px;
   }
   
+  .embut{
+    width: 100%;
+  }
+
   .register-body button[type="submit"] {
     padding: 10px 20px;
     background-color: #3498db;

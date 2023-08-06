@@ -13,6 +13,14 @@ form {
     text-align: center;
     align-items: center;
   }
+
+  .paybut{
+    min-width: 120%;
+  }
+
+  .paybut2{
+    min-width: 70%;
+  }
  
 .payme-tab{
   background-image: url("https://media.istockphoto.com/id/913879566/photo/digital-fingerprint-on-black-screen.jpg?s=612x612&w=0&k=20&c=Ux4M7S97UgQ9qHrLNEHRHh0yjz1ToQZ64UDraKVa4M0=");

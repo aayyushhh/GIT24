@@ -75,22 +75,22 @@ const PaymentPort = () => {
       <div>
     <label>
         Amount(₹):
-        <input type="text" value={amount} onChange={handleAmountChange} className='amount-sec'/>
+        <input type="text" value={amount} onChange={handleAmountChange} className='amount-sec paybut'/>
       </label>
       <br />
       <label>
         Username:
-        <input type="text" value={username} onChange={handleUsernameChange} />
+        <input type="text" value={username} onChange={handleUsernameChange} className=' paybut'/>
       </label>
       <br />
       <label>
         Password(string-pass):
-        <input type="password" value={password} onChange={handlePasswordChange} />
+        <input type="password" value={password} onChange={handlePasswordChange} className='paybut2 paybut'/>
       </label>
       <br />
       <label>
         Password2(PIN):
-        <input type="password" value={password2} onChange={handlePasswordChange2} />
+        <input type="password" value={password2} onChange={handlePasswordChange2} className=' paybut'/>
       </label>
       <br/>
       </div>
