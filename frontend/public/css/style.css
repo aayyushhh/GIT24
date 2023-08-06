@@ -445,6 +445,11 @@ header .intro-text {
   color: #666;
 }
 /* Team Section */
+
+
+.team-c{
+  align-items: center;
+}
 #team {
   padding: 100px 0;
   align-items: center;
@@ -461,14 +466,14 @@ header .intro-text {
 #team .thumbnail {
   background: transparent;
   border: 0;
-  text-align: center;
-  align-items: center;
+  /* text-align: center;
+  align-items: center; */
 }
 #team .thumbnail .caption {
   padding: 10px 0 0;
   color: #888;
-  text-align: center;
-  align-items: center;
+  /* text-align: center;
+  align-items: center; */
 }
 /* Contact Section */
 #contact {

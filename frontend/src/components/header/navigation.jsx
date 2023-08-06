@@ -9,7 +9,7 @@ export const Navigation = (props) => {
   <div class="container-fluid">
   <img className="img-log" src={logo} alt=""></img>
     <a class="navbar-brand content" href="/">Finpro</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" >
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
@@ -18,13 +18,13 @@ export const Navigation = (props) => {
           <a class="nav-link content" aria-current="page" href="/">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link content" href="#features">About Us</a>
+          <a class="nav-link content" href="#about">About Us</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link content" href="#">Services</a>
+          <a class="nav-link content" href="#services">Services</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link content" href="#">Team</a>
+          <a class="nav-link content" href="#team">Team</a>
         </li>
         <li class="nav-item">
           <a class="nav-link content" href="/login">Login</a>
