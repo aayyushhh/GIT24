@@ -84,8 +84,6 @@ function Tokenredeem() {
                 }
   
   
-            alert(response.razorpay_payment_id);
-            alert("yo")
           },
           prefill: {
             name:"harry",

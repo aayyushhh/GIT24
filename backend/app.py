@@ -5,8 +5,8 @@ import math
 
 app = Flask(__name__)
 CORS(app)
-client = MongoClient('mongodb+srv://harry:pVR815eAl4tMBxEw@cluster0.faflnvk.mongodb.net/')
-db = client['tatya']
+client = MongoClient('mongodb+srv://finpro:finpro-sies-14@finpro.w2fysz6.mongodb.net/')
+db = client['main']
 users_collection = db['users']
 
 @app.route('/register', methods=["GET",'POST'])
@@ -18,6 +18,7 @@ def register():
     password2=user_data["password2"]
     key=user_data["key"]
     seckey=user_data["s_key"]
+    contact=user_data["contact"]
     amount=50
     
 
@@ -32,7 +33,8 @@ def register():
         "password2":password2,
         "amount":amount,
         "api_key":key,
-        "s_api_key":seckey
+        "s_api_key":seckey,
+        "contact":contact
     }
 
     # Insert the new user document into the database
