@@ -105,9 +105,9 @@ function Contactpay() {
      <input type="text"placeholder='Enter Amount'value={amount}onChange={(e)=>setamount(e.target.value)} />
      <br/>
      
-     <input type="text"placeholder='Enter password(String)'value={pass}onChange={(e)=>setPass(e.target.value)} />
+     <input type="password"placeholder='Enter password(String)'value={pass}onChange={(e)=>setPass(e.target.value)} />
      <br/>
-     <input type="text"placeholder='Enter Pin'value={pass2}onChange={(e)=>setPass2(e.target.value)} />
+     <input type="password"placeholder='Enter Pin'value={pass2}onChange={(e)=>setPass2(e.target.value)} />
      <br/><br/>
      <button className='token-sub' onClick={HandleSubmit} disabled={loading}>Submit</button>
      

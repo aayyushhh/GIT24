@@ -5,7 +5,7 @@ import math
 
 app = Flask(__name__)
 CORS(app)
-client = MongoClient('mongodb+srv://finpro:finpro-sies-14@finpro.w2fysz6.mongodb.net/')
+client = MongoClient('mongodb+srv://kolih453:harsh@main.aielp5z.mongodb.net/')
 db = client['main']
 users_collection = db['users']
 
@@ -83,7 +83,7 @@ def paytime():
             money_sec = document["amount"]
             print("Money2:", money_sec)
 
-        documents3 = users_collection.find({"username": "admin","password":"admin","password2":"2345"})
+        documents3 = users_collection.find({"username": "admin","password":"1111","password2":"2222"})
         for document in documents3:
             money_a = document["amount"]
             print("Money3:", money_a)
@@ -102,7 +102,7 @@ def paytime():
 
             result1 = users_collection.update_one({"username": M_name,"password":M_pass,"password2":M_pass2}, {"$set": {"amount": new_m2}})
             result2 = users_collection.update_one({"username": username,"password":password,"password2":password2}, {"$set": {"amount": new_m1}})
-            result3 = users_collection.update_one({"username": "admin","password":"admin","password2":"2345"}, {"$set": {"amount": new_m3}})
+            result3 = users_collection.update_one({"username": "admin","password":"1111","password2":"2222"}, {"$set": {"amount": new_m3}})
 
         return jsonify({'message': 'Login successful'}), 200
 
@@ -202,7 +202,7 @@ def payto():
             money_sec = document["amount"]
             print("Money2:", money_sec)
 
-        documents3 = users_collection.find({"username": "admin","password":"admin","password2":"2345"})
+        documents3 = users_collection.find({"username": "admin","password":"1111","password2":"2222"})
         for document in documents3:
             money_a = document["amount"]
             print("Money3:", money_a)
@@ -221,7 +221,7 @@ def payto():
 
             result1 = users_collection.update_one({"contact":contact}, {"$set": {"amount": new_m2}})
             result2 = users_collection.update_one({"username": username,"password":password,"password2":password2}, {"$set": {"amount": new_m1}})
-            result3 = users_collection.update_one({"username": "admin","password":"admin","password2":"2345"}, {"$set": {"amount": new_m3}})
+            result3 = users_collection.update_one({"username": "admin","password":"1111","password2":"2222"}, {"$set": {"amount": new_m3}})
 
         return jsonify({'message': 'Login successful'}), 200
 
@@ -229,4 +229,4 @@ def payto():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host="0.0.0.0",debug=True)

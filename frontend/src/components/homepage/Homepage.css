@@ -22,7 +22,7 @@
 
 .btn1{
   border: none;
-  background-color: rgb(111, 151, 242);
+  background-color: rgb(125, 163, 250);
 }
 
 .btns > button{
@@ -31,6 +31,7 @@
 
 .pay-bt{
   background-color: rgb(255, 128, 0);
+  
   
   
 }

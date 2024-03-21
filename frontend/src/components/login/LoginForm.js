@@ -59,7 +59,7 @@ const LoginForm = () => {
       </label>
       <br />
       <label>
-        Password:
+        Password(FingerPrint):
         <input type="password" value={password} onChange={handlePasswordChange} />
       </label>
       <br/>
