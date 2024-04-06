@@ -47,7 +47,7 @@ const PaymentPort = () => {
 
     try {
       await new Promise((resolve) => setTimeout(resolve, 1500));
-      const response = await fetch('http://127.0.0.1:5000/paytime', {
+      const response = await fetch('http://192.168.11.247:5000/paytime', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

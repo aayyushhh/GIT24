@@ -10,7 +10,7 @@ import { Team } from "./components/Team";
 import { Contact } from "./components/contact";
 import JsonData from "./data/data.json";
 import SmoothScroll from "smooth-scroll";
-// import "./Land.css"
+import "./Land.css"
 
 
 export const scroll = new SmoothScroll('a[href*="#"]', {

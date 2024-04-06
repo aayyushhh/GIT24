@@ -54,18 +54,18 @@
   
   "Team": [
     {
-      "img": "img/team/05.jpeg",
+      "img": "img/team/h1.jpeg",
       "name": "HARSH KOLI",
-      "job": "CEO"
+      "job": "Web Developer"
     },
     {
-      "img": "img/team/07.jpeg",
+      "img": "img/team/a1.jpeg",
       "name": "AYUSH DODAKE",
-      "job": "COC"
+      "job": "Web Developer"
     },
     {
-      "img": "img/team/06.jpg",
-      "name": "ESSAKIRAJA KONNAR",
+      "img": "img/team/s1.jpeg",
+      "name": "SOHAM PAVALE",
       "job": "Finance expert"
     }
    

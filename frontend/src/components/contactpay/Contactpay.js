@@ -49,7 +49,7 @@ function Contactpay() {
 
         const fetchData = async () => {
             try {
-                const response = await axios.get(`http://127.0.0.1:5000/homey/${contact}`);
+                const response = await axios.get(`http://192.168.11.247:5000/homey/${contact}`);
                 setData(response.data);
             } catch (error) {
                 console.error("Error fetching data:", error);
@@ -69,7 +69,7 @@ function Contactpay() {
       
           try {
             await new Promise((resolve) => setTimeout(resolve, 1500));
-            const response = await fetch('http://127.0.0.1:5000/payto', {
+            const response = await fetch('http://192.168.11.247:5000/payto', {
               method: 'POST',
               headers: {
                 'Content-Type': 'application/json',

@@ -20,7 +20,7 @@ function Tokenredeem() {
     useEffect(()=> {
       const fetchData = async() => {
         try{
-          const response = await axios.get(`http://127.0.0.1:5000/home/${uname}/${pass}/${pass2}`);
+          const response = await axios.get(`http://192.168.11.247:5000/home/${uname}/${pass}/${pass2}`);
           setData(response.data);
         }catch(error){
           console.error("Error")
@@ -65,7 +65,7 @@ function Tokenredeem() {
                 };
             
                 try {
-                  const response = await fetch('http://127.0.0.1:5000/redeemtoken', {
+                  const response = await fetch('http://192.168.11.247:5000/redeemtoken', {
                     method: 'POST',
                     headers: {
                       'Content-Type': 'application/json',

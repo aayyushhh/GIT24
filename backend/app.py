@@ -43,6 +43,10 @@ def register():
     return jsonify({'message': 'User registered successfully'}), 200
 
 
+@app.route('/', methods=["GET",'POST'])
+def start():
+    return "Hello world!"
+
 @app.route('/login', methods=["GET",'POST'])
 def login():
     user_data = request.json
@@ -229,4 +233,4 @@ def payto():
 
 
 if __name__ == '__main__':
-    app.run(host="0.0.0.0",debug=True)
+    app.run(host="192.168.11.247",debug=True)

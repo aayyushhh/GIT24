@@ -27,7 +27,7 @@ const Homepage = () => {
     useEffect(()=> {
       const fetchData = async() => {
         try{
-          const response = await axios.get(`http://127.0.0.1:5000/home/${uname}/${pass}/${pass2}`);
+          const response = await axios.get(`http://192.168.11.247:5000/home/${uname}/${pass}/${pass2}`);
           setData(response.data);
         }catch(error){
           console.error("Error")
@@ -94,7 +94,7 @@ const handleClick3 = async (e) => {
     
     </div>
     <About data={landingPageData.About} />
-      <Services data={landingPageData.Services} />
+    <Services data={landingPageData.Services} />
       
       
       
